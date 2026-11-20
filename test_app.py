@@ -6,4 +6,4 @@ def test_home():
     response = client.get("/")
 
     assert response.status_code == 200
-    assert response.data.decode("utf-8") == "Hello, DevOps World! V1"
+    assert b"CI/CD and Docker Pipeline is a massive success! V2" in response.data
